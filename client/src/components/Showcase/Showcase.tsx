@@ -247,6 +247,26 @@ const Showcase = () => {
                   </svg>
                   <span>Immersive visual overlays</span>
                 </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Real-time object recognition</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Spatial mapping technology</span>
+                </div>
+              </div>
+              <div className={styles.showcaseLink}>
+                <a href="#" className={styles.learnMoreLink}>
+                  Learn more
+                  <svg className={styles.arrowIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -279,6 +299,26 @@ const Showcase = () => {
                   </svg>
                   <span>5G-enabled connectivity</span>
                 </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>AI-powered device management</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Secure end-to-end encryption</span>
+                </div>
+              </div>
+              <div className={styles.showcaseLink}>
+                <a href="#" className={styles.learnMoreLink}>
+                  Learn more
+                  <svg className={styles.arrowIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -311,6 +351,26 @@ const Showcase = () => {
                   </svg>
                   <span>Smart contract automation</span>
                 </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Distributed ledger technology</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Tokenization capabilities</span>
+                </div>
+              </div>
+              <div className={styles.showcaseLink}>
+                <a href="#" className={styles.learnMoreLink}>
+                  Learn more
+                  <svg className={styles.arrowIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
               </div>
             </div>
           </motion.div>
