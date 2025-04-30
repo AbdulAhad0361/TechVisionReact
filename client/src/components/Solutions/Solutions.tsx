@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import NetworkModel from '../3DModel/NetworkModel';
+import TorusKnotModel from '../3DModel/TorusKnotModel';
 import styles from './Solutions.module.css';
 
 interface SolutionCardProps {
@@ -95,11 +95,10 @@ const Solutions = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <NetworkModel 
+          <TorusKnotModel 
             backgroundColor={modelBackgroundColor}
-            nodeColor="#3b82f6"
-            lineColor="#8b5cf6"
-            rotationSpeed={0.5}
+            accentColor="#8b5cf6"
+            speed={0.3}
           />
         </motion.div>
 
