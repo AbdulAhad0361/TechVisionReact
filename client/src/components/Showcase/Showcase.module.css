@@ -466,33 +466,15 @@
   position: relative;
 }
 
-.showcaseSmallTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  width: 2rem;
-  height: 2px;
-  background: linear-gradient(90deg, hsl(var(--primary)), transparent);
-  transition: width 0.3s ease;
-}
-
-.showcaseSmallItem:hover .showcaseSmallTitle::after {
-  width: 3.5rem;
-}
-
 :global(.dark) .showcaseSmallTitle {
   color: white;
-}
-
-:global(.dark) .showcaseSmallTitle::after {
-  background: linear-gradient(90deg, hsl(var(--primary)), rgba(31, 41, 55, 0));
 }
 
 .showcaseSmallDescription {
   font-size: 0.875rem;
   color: rgba(107, 114, 128, 1);
   line-height: 1.5;
+  margin-top: 0.25rem;
 }
 
 :global(.dark) .showcaseSmallDescription {
@@ -500,5 +482,5 @@
 }
 
 .showcaseSmallContent .featureList {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
