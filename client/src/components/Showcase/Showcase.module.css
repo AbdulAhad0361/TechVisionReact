@@ -317,7 +317,11 @@
 }
 
 .showcaseIcon.secondary {
-  background-color: rgba(16, 185, 129, 1);
+  background-color: rgba(139, 92, 246, 1);
+}
+
+.showcaseIcon.accentColor {
+  background-color: rgba(244, 63, 94, 1);
 }
 
 .icon {
@@ -458,7 +462,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   color: rgba(17, 24, 39, 1);
-  margin: 0.5rem 0;
+  margin: 0;
   position: relative;
 }
 
