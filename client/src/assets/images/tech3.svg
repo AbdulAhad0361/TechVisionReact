@@ -8,10 +8,40 @@
   <rect width="100%" height="100%" fill="#f1f5f9" />
   <g>
     <rect x="100" y="100" width="600" height="400" rx="20" fill="url(#grad3)" fill-opacity="0.2" stroke="url(#grad3)" stroke-width="2" />
-    <!-- AR visualization -->
-    <rect x="250" y="200" width="300" height="200" rx="10" fill="none" stroke="url(#grad3)" stroke-width="2" stroke-dasharray="5,5" />
-    <circle cx="400" cy="300" r="80" fill="none" stroke="url(#grad3)" stroke-width="3" />
-    <polygon points="350,260 450,260 420,330 380,330" fill="url(#grad3)" fill-opacity="0.3" stroke="url(#grad3)" stroke-width="2" />
-    <text x="400" y="480" font-family="Arial" font-size="24" text-anchor="middle" fill="#8b5cf6">Augmented Reality</text>
+    
+    <!-- AR glasses outline -->
+    <path d="M 220 280 L 320 240 L 480 240 L 580 280 L 520 340 L 480 300 L 320 300 L 280 340 Z" 
+          fill="url(#grad3)" fill-opacity="0.4" stroke="#8b5cf6" stroke-width="2" />
+    
+    <!-- AR Lens Left -->
+    <ellipse cx="320" cy="270" rx="50" ry="30" fill="url(#grad3)" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="2" />
+    
+    <!-- AR Lens Right -->
+    <ellipse cx="480" cy="270" rx="50" ry="30" fill="url(#grad3)" fill-opacity="0.2" stroke="#8b5cf6" stroke-width="2" />
+    
+    <!-- AR UI elements -->
+    <rect x="280" y="180" width="80" height="40" rx="5" fill="url(#grad3)" fill-opacity="0.6" stroke="#8b5cf6" stroke-width="1" />
+    <text x="320" y="205" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Menu</text>
+    
+    <rect x="440" y="180" width="80" height="40" rx="5" fill="url(#grad3)" fill-opacity="0.6" stroke="#8b5cf6" stroke-width="1" />
+    <text x="480" y="205" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Options</text>
+    
+    <rect x="360" y="360" width="80" height="40" rx="5" fill="url(#grad3)" fill-opacity="0.6" stroke="#8b5cf6" stroke-width="1" />
+    <text x="400" y="385" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Actions</text>
+    
+    <!-- AR Grid and objects -->
+    <line x1="250" y1="400" x2="550" y2="400" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="5,5" />
+    <line x1="300" y1="380" x2="300" y2="420" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="5,5" />
+    <line x1="350" y1="380" x2="350" y2="420" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="5,5" />
+    <line x1="400" y1="380" x2="400" y2="420" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="5,5" />
+    <line x1="450" y1="380" x2="450" y2="420" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="5,5" />
+    <line x1="500" y1="380" x2="500" y2="420" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="5,5" />
+    
+    <!-- AR Object -->
+    <polygon points="400,320 420,350 380,350" fill="#8b5cf6" fill-opacity="0.8" stroke="#8b5cf6" stroke-width="1" />
+    <circle cx="400" cy="400" r="5" fill="#8b5cf6" />
+    <line x1="400" y1="350" x2="400" y2="395" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3,3" />
+    
+    <text x="400" y="530" font-family="Arial" font-size="24" text-anchor="middle" fill="#8b5cf6">Augmented Reality</text>
   </g>
 </svg>

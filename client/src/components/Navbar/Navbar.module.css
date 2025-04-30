@@ -94,24 +94,69 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 :global(.dark) .themeToggle {
   background-color: rgba(31, 41, 55, 1);
   color: rgba(156, 163, 175, 1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .themeToggle:hover {
   background-color: rgba(229, 231, 235, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 :global(.dark) .themeToggle:hover {
   background-color: rgba(55, 65, 81, 1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  color: rgba(209, 213, 219, 1);
+}
+
+.themeToggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
 }
 
 .themeIcon {
   height: 1.25rem;
   width: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.themeIcon.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.themeIcon.hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+/* Accessibly hide text but keep it available for screen readers */
+:global(.sr-only) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .mobileMenuButton {
