@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { motion } from 'framer-motion';
+import { smoothScrollTo } from '@/lib/utils';
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -137,10 +138,24 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <a href="#features" className={styles.primaryButton}>
+            <a 
+              href="#features" 
+              className={styles.primaryButton}
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScrollTo('features', 80);
+              }}
+            >
               Explore Features
             </a>
-            <a href="#showcase" className={styles.secondaryButton}>
+            <a 
+              href="#showcase" 
+              className={styles.secondaryButton}
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScrollTo('showcase', 80);
+              }}
+            >
               View Showcase
             </a>
           </motion.div>
@@ -154,22 +169,14 @@ const Hero = () => {
         >
           <div 
             className={styles.scrollIcon}
-            onClick={() => {
-              const featuresSection = document.getElementById('features');
-              if (featuresSection) {
-                featuresSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={() => smoothScrollTo('features', 80)}
             role="button"
             aria-label="Scroll to features"
             tabIndex={0}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                const featuresSection = document.getElementById('features');
-                if (featuresSection) {
-                  featuresSection.scrollIntoView({ behavior: 'smooth' });
-                }
+                smoothScrollTo('features', 80);
               }
             }}
           >
