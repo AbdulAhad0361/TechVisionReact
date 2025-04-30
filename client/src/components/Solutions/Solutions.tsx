@@ -56,15 +56,16 @@ const SolutionCard = ({
 };
 
 const Solutions = () => {
-  const [sectionRef, isVisible] = useIntersectionObserver<HTMLElement>({
+  const [sectionRef, isVisible] = useIntersectionObserver<HTMLDivElement>({
     threshold: 0.1,
   });
 
+  // Get the current theme for the 3D model background
   const isDarkMode = document.documentElement.classList.contains('dark');
   const modelBackgroundColor = isDarkMode ? '#1f2937' : 'hsl(var(--background))';
 
   return (
-    <section id="solutions" ref={sectionRef} className={`${styles.solutionsSection} ${isVisible ? styles.visible : ''}`}>
+    <div id="solutions" ref={sectionRef} className={`${styles.solutionsSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.container}>
         <div className={styles.header}>
           <motion.h2 
@@ -175,7 +176,7 @@ const Solutions = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
