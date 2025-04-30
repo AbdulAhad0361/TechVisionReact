@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import CubeModel from '@/components/3DModel/CubeModel';
+import SphereModel from '@/components/3DModel/SphereModel';
 import styles from './Showcase.module.css';
 
 // Import local SVG images
@@ -26,14 +26,23 @@ const Showcase = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1]
       },
     },
+  };
+
+  const tagStyles = {
+    ai: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    connectivity: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    compute: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    security: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-300',
+    blockchain: 'bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300',
   };
 
   return (
@@ -68,7 +77,10 @@ const Showcase = () => {
           viewport={{ once: true }}
           className={styles.modelContainer}
         >
-          <CubeModel />
+          <SphereModel />
+          <div className={styles.modelOverlay}>
+            <span className={styles.modelText}>Interactive Technology Network</span>
+          </div>
         </motion.div>
 
         <motion.div 
@@ -92,6 +104,11 @@ const Showcase = () => {
               />
             </div>
             <div className={styles.showcaseContent}>
+              <div className={styles.tagContainer}>
+                <span className={`${styles.tag} ${tagStyles.ai}`}>AI</span>
+                <span className={`${styles.tag} ${tagStyles.compute}`}>Neural Computing</span>
+              </div>
+              
               <div className={styles.showcaseIconWrapper}>
                 <span className={styles.showcaseIcon}>
                   <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,6 +122,28 @@ const Showcase = () => {
                   </p>
                 </div>
               </div>
+              
+              <div className={styles.featureList}>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Direct thought-to-text translation</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>99.8% accuracy in intent detection</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Non-invasive neural sensors</span>
+                </div>
+              </div>
+              
               <div className={styles.showcaseLink}>
                 <a href="#" className={styles.learnMoreLink}>
                   Learn more
@@ -129,6 +168,11 @@ const Showcase = () => {
               />
             </div>
             <div className={styles.showcaseContent}>
+              <div className={styles.tagContainer}>
+                <span className={`${styles.tag} ${tagStyles.compute}`}>Quantum</span>
+                <span className={`${styles.tag} ${tagStyles.security}`}>Encryption</span>
+              </div>
+              
               <div className={styles.showcaseIconWrapper}>
                 <span className={`${styles.showcaseIcon} ${styles.secondary}`}>
                   <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -142,6 +186,28 @@ const Showcase = () => {
                   </p>
                 </div>
               </div>
+              
+              <div className={styles.featureList}>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>1000+ qubits architecture</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Quantum error correction</span>
+                </div>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Cloud-based quantum API</span>
+                </div>
+              </div>
+              
               <div className={styles.showcaseLink}>
                 <a href="#" className={`${styles.learnMoreLink} ${styles.secondaryLink}`}>
                   Learn more
@@ -167,10 +233,21 @@ const Showcase = () => {
               />
             </div>
             <div className={styles.showcaseSmallContent}>
+              <div className={styles.tagContainer}>
+                <span className={`${styles.tag} ${tagStyles.ai}`}>AR/VR</span>
+              </div>
               <h3 className={styles.showcaseSmallTitle}>Augmented Reality</h3>
               <p className={styles.showcaseSmallDescription}>
                 Transform how users interact with the world through our advanced AR solutions.
               </p>
+              <div className={styles.featureList}>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Immersive visual overlays</span>
+                </div>
+              </div>
             </div>
           </motion.div>
 
