@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import ThemeTest from "./components/ThemeTest";
 
 function Router() {
   return (
@@ -21,7 +20,6 @@ function Router() {
 function App() {
   return (
     <ThemeProvider>
-      <ThemeTest />
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
