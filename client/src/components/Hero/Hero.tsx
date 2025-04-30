@@ -153,7 +153,7 @@ const Hero = () => {
           transition={{ delay: 1, duration: 0.8 }}
         >
           <div 
-            className={styles.scrollIconWrapper}
+            className={styles.scrollIcon}
             onClick={() => {
               const featuresSection = document.getElementById('features');
               if (featuresSection) {
@@ -173,15 +173,9 @@ const Hero = () => {
               }
             }}
           >
-            <div className={styles.scrollIcon}>
-              <svg className={`${styles.arrow} ${styles.arrowUp}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-              </svg>
-              <svg className={styles.arrow} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              </svg>
-            </div>
-            <span className={styles.scrollText}>Explore</span>
+            <svg className={styles.arrow} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
           </div>
         </motion.div>
       </div>
