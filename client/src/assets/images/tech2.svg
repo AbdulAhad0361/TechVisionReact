@@ -8,13 +8,46 @@
   <rect width="100%" height="100%" fill="#f1f5f9" />
   <g>
     <rect x="100" y="100" width="600" height="400" rx="20" fill="url(#grad2)" fill-opacity="0.2" stroke="url(#grad2)" stroke-width="2" />
-    <!-- Quantum Computing symbol representation -->
-    <circle cx="250" cy="250" r="50" fill="none" stroke="url(#grad2)" stroke-width="3" />
-    <circle cx="400" cy="300" r="50" fill="none" stroke="url(#grad2)" stroke-width="3" />
-    <circle cx="550" cy="250" r="50" fill="none" stroke="url(#grad2)" stroke-width="3" />
-    <line x1="250" y1="250" x2="400" y2="300" stroke="url(#grad2)" stroke-width="2" />
-    <line x1="400" y1="300" x2="550" y2="250" stroke="url(#grad2)" stroke-width="2" />
-    <line x1="250" y1="250" x2="550" y2="250" stroke="url(#grad2)" stroke-width="2" />
-    <text x="400" y="480" font-family="Arial" font-size="24" text-anchor="middle" fill="#10b981">Quantum Computing Platform</text>
+    
+    <!-- Quantum computing visualization -->
+    <circle cx="400" cy="300" r="80" fill="none" stroke="url(#grad2)" stroke-width="2" />
+    <circle cx="400" cy="300" r="60" fill="none" stroke="url(#grad2)" stroke-width="2" />
+    <circle cx="400" cy="300" r="40" fill="none" stroke="url(#grad2)" stroke-width="2" />
+    
+    <!-- Quantum particles -->
+    <circle cx="400" cy="220" r="8" fill="url(#grad2)" />
+    <circle cx="480" cy="300" r="8" fill="url(#grad2)" />
+    <circle cx="400" cy="380" r="8" fill="url(#grad2)" />
+    <circle cx="320" cy="300" r="8" fill="url(#grad2)" />
+    <circle cx="357" cy="243" r="8" fill="url(#grad2)" />
+    <circle cx="457" cy="243" r="8" fill="url(#grad2)" />
+    <circle cx="457" cy="357" r="8" fill="url(#grad2)" />
+    <circle cx="357" cy="357" r="8" fill="url(#grad2)" />
+    
+    <!-- Quantum paths -->
+    <circle cx="400" cy="300" r="20" fill="none" stroke-dasharray="5,5" stroke="url(#grad2)" stroke-width="1.5" />
+    <path d="M 400 220 Q 500 250, 480 300" fill="none" stroke="url(#grad2)" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M 480 300 Q 500 350, 400 380" fill="none" stroke="url(#grad2)" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M 400 380 Q 300 350, 320 300" fill="none" stroke="url(#grad2)" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M 320 300 Q 300 250, 400 220" fill="none" stroke="url(#grad2)" stroke-width="1.5" stroke-dasharray="5,5" />
+    
+    <!-- Binary -->
+    <text x="250" y="200" font-family="monospace" font-size="14" fill="#10b981">10110101</text>
+    <text x="270" y="220" font-family="monospace" font-size="14" fill="#10b981">01011010</text>
+    <text x="290" y="240" font-family="monospace" font-size="14" fill="#10b981">11100011</text>
+    
+    <text x="480" y="200" font-family="monospace" font-size="14" fill="#10b981">01100111</text>
+    <text x="500" y="220" font-family="monospace" font-size="14" fill="#10b981">10011001</text>
+    <text x="520" y="240" font-family="monospace" font-size="14" fill="#10b981">00111100</text>
+    
+    <text x="250" y="380" font-family="monospace" font-size="14" fill="#10b981">11010010</text>
+    <text x="270" y="400" font-family="monospace" font-size="14" fill="#10b981">00101101</text>
+    <text x="290" y="420" font-family="monospace" font-size="14" fill="#10b981">10101010</text>
+    
+    <text x="480" y="380" font-family="monospace" font-size="14" fill="#10b981">00110011</text>
+    <text x="500" y="400" font-family="monospace" font-size="14" fill="#10b981">11001100</text>
+    <text x="520" y="420" font-family="monospace" font-size="14" fill="#10b981">01010101</text>
+    
+    <text x="400" y="530" font-family="Arial" font-size="24" text-anchor="middle" fill="#10b981">Quantum Computing Platform</text>
   </g>
 </svg>

@@ -1,9 +1,17 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import CubeModel from '@/components/3DModel/CubeModel';
 import styles from './Showcase.module.css';
 
+// Import local SVG images
+import tech1 from '@/assets/images/tech1.svg';
+import tech2 from '@/assets/images/tech2.svg';
+import tech3 from '@/assets/images/tech3.svg';
+import tech4 from '@/assets/images/tech4.svg';
+import tech5 from '@/assets/images/tech5.svg';
+
 const Showcase = () => {
-  const [sectionRef, isVisible] = useIntersectionObserver({
+  const [sectionRef, isVisible] = useIntersectionObserver<HTMLElement>({
     threshold: 0.1,
   });
 
@@ -52,6 +60,17 @@ const Showcase = () => {
           </motion.p>
         </div>
 
+        {/* 3D Model Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className={styles.modelContainer}
+        >
+          <CubeModel />
+        </motion.div>
+
         <motion.div 
           className={styles.showcaseGrid}
           variants={containerVariants}
@@ -60,11 +79,15 @@ const Showcase = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Featured showcase items - row 1 */}
-          <motion.div className={`${styles.showcaseItem} ${styles.featured}`} variants={itemVariants}>
+          <motion.div 
+            className={`${styles.showcaseItem} ${styles.featured}`} 
+            variants={itemVariants}
+            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+          >
             <div className={styles.showcaseImageContainer}>
               <img 
-                src="https://images.unsplash.com/photo-1581090700227-8e3b56af6d66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-                alt="Abstract technology visual" 
+                src={tech1} 
+                alt="Neural Interface Technology" 
                 className={styles.showcaseImage}
               />
             </div>
@@ -93,11 +116,15 @@ const Showcase = () => {
             </div>
           </motion.div>
 
-          <motion.div className={`${styles.showcaseItem} ${styles.featured}`} variants={itemVariants}>
+          <motion.div 
+            className={`${styles.showcaseItem} ${styles.featured}`} 
+            variants={itemVariants}
+            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+          >
             <div className={styles.showcaseImageContainer}>
               <img 
-                src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-                alt="Modern tech devices" 
+                src={tech2} 
+                alt="Quantum Computing Platform" 
                 className={styles.showcaseImage}
               />
             </div>
@@ -127,11 +154,15 @@ const Showcase = () => {
           </motion.div>
 
           {/* Small showcase items - row 2 */}
-          <motion.div className={styles.showcaseSmallItem} variants={itemVariants}>
+          <motion.div 
+            className={styles.showcaseSmallItem} 
+            variants={itemVariants}
+            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+          >
             <div className={styles.showcaseSmallImageContainer}>
               <img 
-                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Digital innovation concept" 
+                src={tech3} 
+                alt="Augmented Reality" 
                 className={styles.showcaseSmallImage}
               />
             </div>
@@ -143,11 +174,15 @@ const Showcase = () => {
             </div>
           </motion.div>
 
-          <motion.div className={styles.showcaseSmallItem} variants={itemVariants}>
+          <motion.div 
+            className={styles.showcaseSmallItem} 
+            variants={itemVariants}
+            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+          >
             <div className={styles.showcaseSmallImageContainer}>
               <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Tech workspace" 
+                src={tech4} 
+                alt="IoT Ecosystem" 
                 className={styles.showcaseSmallImage}
               />
             </div>
@@ -159,11 +194,15 @@ const Showcase = () => {
             </div>
           </motion.div>
 
-          <motion.div className={styles.showcaseSmallItem} variants={itemVariants}>
+          <motion.div 
+            className={styles.showcaseSmallItem} 
+            variants={itemVariants}
+            whileHover={{ y: -10, transition: { duration: 0.3 } }}
+          >
             <div className={styles.showcaseSmallImageContainer}>
               <img 
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="Advanced technology" 
+                src={tech5} 
+                alt="Blockchain Solutions" 
                 className={styles.showcaseSmallImage}
               />
             </div>
