@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import styles from './Contact.module.css';
 
 const Contact = () => {
-  const [sectionRef, isVisible] = useIntersectionObserver({
+  const [sectionRef, isVisible] = useIntersectionObserver<HTMLElement>({
     threshold: 0.1,
   });
   
@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className={`${styles.contactSection} ${isVisible ? styles.visible : ''}`}>
+    <section id="contact" ref={sectionRef as React.RefObject<HTMLElement>} className={`${styles.contactSection} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.backgroundDecoration}></div>
       
       <div className={styles.container}>

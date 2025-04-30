@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useTheme } from '@/contexts/ThemeContext';
+import { smoothScrollTo } from '@/lib/utils';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -9,6 +10,18 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    
+    // Close mobile menu if open
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+    
+    // Smooth scroll to the section with 50px offset from the top
+    smoothScrollTo(sectionId, 80);
+  }, [isMenuOpen]);
 
   return (
     <nav className={styles.navbar}>
@@ -24,10 +37,10 @@ const Navbar = () => {
           </div>
           
           <div className={styles.desktopMenu}>
-            <a href="#features" className={styles.navLink}>Features</a>
-            <a href="#showcase" className={styles.navLink}>Showcase</a>
-            <a href="#solutions" className={styles.navLink}>Solutions</a>
-            <a href="#contact" className={styles.navLink}>Contact</a>
+            <a href="#features" className={styles.navLink} onClick={(e) => handleNavClick(e, 'features')}>Features</a>
+            <a href="#showcase" className={styles.navLink} onClick={(e) => handleNavClick(e, 'showcase')}>Showcase</a>
+            <a href="#solutions" className={styles.navLink} onClick={(e) => handleNavClick(e, 'solutions')}>Solutions</a>
+            <a href="#contact" className={styles.navLink} onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
           </div>
           
           <div className={styles.navControls}>
@@ -92,10 +105,10 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ''}`}>
-        <a href="#features" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Features</a>
-        <a href="#showcase" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Showcase</a>
-        <a href="#solutions" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Solutions</a>
-        <a href="#contact" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Contact</a>
+        <a href="#features" className={styles.mobileNavLink} onClick={(e) => handleNavClick(e, 'features')}>Features</a>
+        <a href="#showcase" className={styles.mobileNavLink} onClick={(e) => handleNavClick(e, 'showcase')}>Showcase</a>
+        <a href="#solutions" className={styles.mobileNavLink} onClick={(e) => handleNavClick(e, 'solutions')}>Solutions</a>
+        <a href="#contact" className={styles.mobileNavLink} onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
       </div>
     </nav>
   );
