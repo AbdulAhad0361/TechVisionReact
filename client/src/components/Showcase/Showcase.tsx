@@ -246,7 +246,7 @@ const Showcase = () => {
                 <div className={styles.showcaseTitleWrapper}>
                   <h3 className={styles.showcaseSmallTitle}>Augmented Reality</h3>
                   <p className={styles.showcaseSmallDescription}>
-                    Transform how users interact with the world through our advanced AR solutions. Our cutting-edge technology blends digital information seamlessly with the physical environment for enhanced experiences in retail, education, and industrial applications.
+                    Transform how users interact with the world through our advanced AR solutions. Our cutting-edge technology blends digital information seamlessly.
                   </p>
                 </div>
               </div>
@@ -308,7 +308,7 @@ const Showcase = () => {
                 <div className={styles.showcaseTitleWrapper}>
                   <h3 className={styles.showcaseSmallTitle}>IoT Ecosystem</h3>
                   <p className={styles.showcaseSmallDescription}>
-                    Connect and control your devices with our integrated IoT platform. Our comprehensive ecosystem provides seamless connectivity for smart homes, industrial sensors, and enterprise applications with powerful analytics and intelligent automation capabilities.
+                    Connect and control your devices with our integrated IoT platform. Our comprehensive ecosystem provides seamless connectivity for smart homes.
                   </p>
                 </div>
               </div>
@@ -370,7 +370,7 @@ const Showcase = () => {
                 <div className={styles.showcaseTitleWrapper}>
                   <h3 className={styles.showcaseSmallTitle}>Blockchain Solutions</h3>
                   <p className={styles.showcaseSmallDescription}>
-                    Secure, transparent, and immutable record-keeping for your business operations. Our blockchain solutions provide unprecedented security and trust through distributed ledger technology, enabling smart contracts, supply chain verification, and secure digital transactions across industries.
+                    Secure, transparent, and immutable record-keeping for your business operations. Our blockchain solutions provide unprecedented security.
                   </p>
                 </div>
               </div>
