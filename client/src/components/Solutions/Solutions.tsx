@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import TorusKnotModel from '../3DModel/TorusKnotModel';
+import SimpleTorusKnot from '../3DModel/SimpleTorusKnot';
 import styles from './Solutions.module.css';
 
 interface SolutionCardProps {
@@ -95,10 +95,10 @@ const Solutions = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <TorusKnotModel 
+          <SimpleTorusKnot 
             backgroundColor={modelBackgroundColor}
             accentColor="#8b5cf6"
-            speed={0.5}
+            rotationSpeed={0.5}
           />
         </motion.div>
 
