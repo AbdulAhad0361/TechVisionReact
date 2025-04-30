@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import SimpleTorusKnot from '../3DModel/SimpleTorusKnot';
+import GalaxyModel from '../3DModel/GalaxyModel';
 import styles from './Solutions.module.css';
 
 interface SolutionCardProps {
@@ -95,9 +95,10 @@ const Solutions = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <SimpleTorusKnot 
+          <GalaxyModel 
             backgroundColor={modelBackgroundColor}
-            accentColor="#8b5cf6"
+            primaryColor="#8b5cf6"
+            secondaryColor="#ec4899"
             rotationSpeed={0.5}
           />
         </motion.div>
