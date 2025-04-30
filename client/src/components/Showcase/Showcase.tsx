@@ -264,10 +264,22 @@ const Showcase = () => {
               />
             </div>
             <div className={styles.showcaseSmallContent}>
+              <div className={styles.tagContainer}>
+                <span className={`${styles.tag} ${tagStyles.connectivity}`}>IoT</span>
+                <span className={`${styles.tag} ${tagStyles.ai}`}>Smart Home</span>
+              </div>
               <h3 className={styles.showcaseSmallTitle}>IoT Ecosystem</h3>
               <p className={styles.showcaseSmallDescription}>
                 Connect and control your devices with our integrated IoT platform.
               </p>
+              <div className={styles.featureList}>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>5G-enabled connectivity</span>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -284,10 +296,22 @@ const Showcase = () => {
               />
             </div>
             <div className={styles.showcaseSmallContent}>
+              <div className={styles.tagContainer}>
+                <span className={`${styles.tag} ${tagStyles.blockchain}`}>Blockchain</span>
+                <span className={`${styles.tag} ${tagStyles.security}`}>Decentralized</span>
+              </div>
               <h3 className={styles.showcaseSmallTitle}>Blockchain Solutions</h3>
               <p className={styles.showcaseSmallDescription}>
                 Secure, transparent, and immutable record-keeping for your business operations.
               </p>
+              <div className={styles.featureList}>
+                <div className={styles.featureItem}>
+                  <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Smart contract automation</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </motion.div>

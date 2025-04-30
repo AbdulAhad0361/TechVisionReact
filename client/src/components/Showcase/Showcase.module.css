@@ -444,17 +444,40 @@
 
 .showcaseSmallContent {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .showcaseSmallTitle {
   font-size: 1.125rem;
   font-weight: 600;
   color: rgba(17, 24, 39, 1);
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.showcaseSmallTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, hsl(var(--primary)), transparent);
+  transition: width 0.3s ease;
+}
+
+.showcaseSmallItem:hover .showcaseSmallTitle::after {
+  width: 3.5rem;
 }
 
 :global(.dark) .showcaseSmallTitle {
   color: white;
+}
+
+:global(.dark) .showcaseSmallTitle::after {
+  background: linear-gradient(90deg, hsl(var(--primary)), rgba(31, 41, 55, 0));
 }
 
 .showcaseSmallDescription {
@@ -465,4 +488,8 @@
 
 :global(.dark) .showcaseSmallDescription {
   color: rgba(156, 163, 175, 1);
+}
+
+.showcaseSmallContent .featureList {
+  margin-top: 0.5rem;
 }
