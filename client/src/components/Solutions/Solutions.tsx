@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import TorusKnotModel from '../3DModel/TorusKnotModel';
 import styles from './Solutions.module.css';
 
 interface SolutionCardProps {
@@ -55,9 +56,12 @@ const SolutionCard = ({
 };
 
 const Solutions = () => {
-  const [sectionRef, isVisible] = useIntersectionObserver({
+  const [sectionRef, isVisible] = useIntersectionObserver<HTMLElement>({
     threshold: 0.1,
   });
+
+  const isDarkMode = document.documentElement.classList.contains('dark');
+  const modelBackgroundColor = isDarkMode ? '#1f2937' : 'hsl(var(--background))';
 
   return (
     <section id="solutions" ref={sectionRef} className={`${styles.solutionsSection} ${isVisible ? styles.visible : ''}`}>
@@ -82,6 +86,20 @@ const Solutions = () => {
             Tailored technological solutions to address specific industry challenges and drive growth.
           </motion.p>
         </div>
+
+        <motion.div 
+          className={styles.model3DContainer}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <TorusKnotModel 
+            backgroundColor={modelBackgroundColor}
+            accentColor="#8b5cf6"
+            speed={0.5}
+          />
+        </motion.div>
 
         <div className={styles.solutionsGrid}>
           <SolutionCard 
