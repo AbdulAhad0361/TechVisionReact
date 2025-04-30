@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import GalaxyModel from '../3DModel/GalaxyModel';
+import NetworkModel from '../3DModel/NetworkModel';
 import styles from './Solutions.module.css';
 
 interface SolutionCardProps {
@@ -95,10 +95,10 @@ const Solutions = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <GalaxyModel 
+          <NetworkModel 
             backgroundColor={modelBackgroundColor}
-            primaryColor="#8b5cf6"
-            secondaryColor="#ec4899"
+            nodeColor="#3b82f6"
+            lineColor="#8b5cf6"
             rotationSpeed={0.5}
           />
         </motion.div>
