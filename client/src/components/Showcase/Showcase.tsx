@@ -236,10 +236,20 @@ const Showcase = () => {
               <div className={styles.tagContainer}>
                 <span className={`${styles.tag} ${tagStyles.ai}`}>AR/VR</span>
               </div>
-              <h3 className={styles.showcaseSmallTitle}>Augmented Reality</h3>
-              <p className={styles.showcaseSmallDescription}>
-                Transform how users interact with the world through our advanced AR solutions.
-              </p>
+              
+              <div className={styles.showcaseIconWrapper}>
+                <span className={styles.showcaseIcon}>
+                  <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </span>
+                <div className={styles.showcaseTitleWrapper}>
+                  <h3 className={styles.showcaseSmallTitle}>Augmented Reality</h3>
+                  <p className={styles.showcaseSmallDescription}>
+                    Transform how users interact with the world through our advanced AR solutions.
+                  </p>
+                </div>
+              </div>
               <div className={styles.featureList}>
                 <div className={styles.featureItem}>
                   <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -288,10 +298,20 @@ const Showcase = () => {
                 <span className={`${styles.tag} ${tagStyles.connectivity}`}>IoT</span>
                 <span className={`${styles.tag} ${tagStyles.ai}`}>Smart Home</span>
               </div>
-              <h3 className={styles.showcaseSmallTitle}>IoT Ecosystem</h3>
-              <p className={styles.showcaseSmallDescription}>
-                Connect and control your devices with our integrated IoT platform.
-              </p>
+              
+              <div className={styles.showcaseIconWrapper}>
+                <span className={`${styles.showcaseIcon} ${styles.secondary}`}>
+                  <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </span>
+                <div className={styles.showcaseTitleWrapper}>
+                  <h3 className={styles.showcaseSmallTitle}>IoT Ecosystem</h3>
+                  <p className={styles.showcaseSmallDescription}>
+                    Connect and control your devices with our integrated IoT platform.
+                  </p>
+                </div>
+              </div>
               <div className={styles.featureList}>
                 <div className={styles.featureItem}>
                   <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -340,10 +360,20 @@ const Showcase = () => {
                 <span className={`${styles.tag} ${tagStyles.blockchain}`}>Blockchain</span>
                 <span className={`${styles.tag} ${tagStyles.security}`}>Decentralized</span>
               </div>
-              <h3 className={styles.showcaseSmallTitle}>Blockchain Solutions</h3>
-              <p className={styles.showcaseSmallDescription}>
-                Secure, transparent, and immutable record-keeping for your business operations.
-              </p>
+              
+              <div className={styles.showcaseIconWrapper}>
+                <span className={`${styles.showcaseIcon} ${styles.accentColor}`}>
+                  <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </span>
+                <div className={styles.showcaseTitleWrapper}>
+                  <h3 className={styles.showcaseSmallTitle}>Blockchain Solutions</h3>
+                  <p className={styles.showcaseSmallDescription}>
+                    Secure, transparent, and immutable record-keeping for your business operations.
+                  </p>
+                </div>
+              </div>
               <div className={styles.featureList}>
                 <div className={styles.featureItem}>
                   <svg className={styles.featureIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
